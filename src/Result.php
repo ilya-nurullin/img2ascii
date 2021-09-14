@@ -28,4 +28,17 @@ class Result {
         fclose($fh);
         return $this;
     }
+
+    public function getText($lineEnding = "\n") {
+        $fh = '';
+        foreach($this->ascii as $line) {
+            foreach($line as $value) {
+                $value = $this->transformValue($value);
+                $fh .= $value;
+            }
+            $fh .= $lineEnding;
+
+        }
+        return $fh;
+    }
 }
