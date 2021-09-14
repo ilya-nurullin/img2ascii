@@ -96,7 +96,8 @@ class Processor {
     }
 
     public function result($symbols = "@%#*+=-:. ") {
-        $res = new BlackWhiteResult($this->saturate($this->result));
+        $ascii = $this->saturate($this->result);
+        $res = new BlackWhiteResult($ascii);
         $res->symbols = $symbols;
         return $res;
     }

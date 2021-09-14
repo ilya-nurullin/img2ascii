@@ -1,5 +1,5 @@
 {
-    "name": "bylexus/img2ascii",
+    "name": "ilya-nurullin/img2ascii",
     "version":"1.0.0",
     "require": {
         "php": ">= 5.3",
